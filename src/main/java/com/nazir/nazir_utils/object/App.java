@@ -1,4 +1,4 @@
-package com.nazir.nazir_utils;
+package com.nazir.nazir_utils.object;
 
 /**
  * Hello world!
