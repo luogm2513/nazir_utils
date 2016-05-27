@@ -33,19 +33,19 @@ public class JsonUtilTest {
         String userBeanToJson = JsonUtil.toJSon(userBean1);
         String deptBeanToJson = JsonUtil.toJSon(deptBean);
 
-        System.out.println("deptBean to json:" + deptBeanToJson);
-        System.out.println("userBean to json:" + userBeanToJson);
+        // System.out.println("deptBean to json:" + deptBeanToJson);
+        // System.out.println("userBean to json:" + userBeanToJson);
 
         // json转字符串
         UserBean jsonToUserBean = JsonUtil.readValue(userBeanToJson, UserBean.class);
         DeptBean jsonToDeptBean = JsonUtil.readValue(deptBeanToJson, DeptBean.class);
 
-        System.out.println("json to DeptBean" + jsonToDeptBean.toString());
-        System.out.println("json to UserBean" + jsonToUserBean.toString());
+        // System.out.println("json to DeptBean" + jsonToDeptBean.toString());
+        // System.out.println("json to UserBean" + jsonToUserBean.toString());
 
         // List 转json字符串
         String listToJson = JsonUtil.toJSon(userBeans);
-        System.out.println("list to json:" + listToJson);
+        // System.out.println("list to json:" + listToJson);
 
         // 数组json转 List
         List<UserBean> jsonToUserBeans = JsonUtil.readValue(listToJson, new TypeReference<List<UserBean>>() {
