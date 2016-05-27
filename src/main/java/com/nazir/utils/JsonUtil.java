@@ -1,4 +1,4 @@
-package com.nazir.nazir_utils.utils;
+package com.nazir.utils;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;

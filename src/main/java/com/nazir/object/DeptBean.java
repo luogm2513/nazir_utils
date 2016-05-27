@@ -1,4 +1,4 @@
-package com.nazir.nazir_utils.object;
+package com.nazir.object;
 
 import java.util.List;
 

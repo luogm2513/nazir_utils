@@ -1,4 +1,4 @@
-package com.nazir.nazir_utils.object;
+package com.nazir.object;
 
 public class UserBean {
     private int userId;

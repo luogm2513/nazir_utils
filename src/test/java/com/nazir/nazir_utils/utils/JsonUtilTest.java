@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.codehaus.jackson.type.TypeReference;
 
-import com.nazir.nazir_utils.object.DeptBean;
-import com.nazir.nazir_utils.object.UserBean;
+import com.nazir.object.DeptBean;
+import com.nazir.object.UserBean;
+import com.nazir.utils.JsonUtil;
 
 /**
  * @Type JsonUtilTest
