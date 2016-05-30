@@ -1,8 +1,13 @@
 package com.nazir.nazir_utils.utils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
 import com.nazir.object.DeptBean;
@@ -54,7 +59,25 @@ public class JsonUtilTest {
         for (UserBean userBean : jsonToUserBeans) {
             userBeanString += userBean.toString() + "\n";
         }
-        System.out.println("json to userBeans:" + userBeanString);
+        // System.out.println("json to userBeans:" + userBeanString);
+
+        String json = "{\"deptId\":1,\"deptName\":\"sanguo\",\"userBeanList\":[{\"userId\":1,\"userName\":\"liubei\",\"password\":\"123\",\"email\":\"liubei@163.com\"},{\"userId\":2,\"userName\":\"guanyu\",\"password\":\"123\",\"email\":\"guanyu@163.com\"}]}";
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            JsonNode node = objectMapper.readTree(json);
+            String deptName = node.get("deptName").getTextValue();
+            JsonNode userBeanListNode = node.get("userBeanList");
+            List<UserBean> list = objectMapper.readValue(userBeanListNode, new TypeReference<List<UserBean>>() {
+            });
+            System.out.println(JsonUtil.toJSon(list));
+        } catch (JsonParseException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
