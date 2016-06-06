@@ -113,7 +113,6 @@ public class JsonUtil {
      * 对象转换为标准格式输出
      * 
      * @param Object 需要转换的对象
-     * @param state 是否标准化
      * @return
      */
     public static String toJSONFormatter(Object obj) {
