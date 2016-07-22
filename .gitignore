@@ -4,6 +4,8 @@
 *.classpath
 *.project
 *.class
+*.DS_Store
+*.idea
 *.bak
 
 # Package Files #
